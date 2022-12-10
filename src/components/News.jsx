@@ -14,16 +14,20 @@ export default class News extends Component {
     category:PropTypes.string,
     pagesize:PropTypes.number
    }
-   constructor(){
-    super();
+   Captalized=(string)=>{
+    return string.charAt(0).toUpperCase()+string.slice(1)
+   }
+   constructor(props){
+    super(props);
     this.state={
         articles: [],
         loading:false,
         page:1
 
     }
+    document.title=`${this.Captalized(this.props.category)}-ApnaNews`;
+    console.log(this.props.category);
    }
-   tot=0;
 
 
 async updatenews(pageNO){
@@ -66,7 +70,8 @@ handlePrev=async()=>{
         </>
         
         }
-        <h1 className='text-center'>Apna news top headlines </h1>
+        
+        <h1 className='text-center ' style={{margin:"34px 0px"}}>Apna news top headlines on {this.Captalized(this.props.category)} </h1>
         
         <div className="row">
         { !this.state.loading&&this.state.articles.map((Element)=>{
