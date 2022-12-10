@@ -6,7 +6,7 @@ export default class Newslist extends Component {
     return (
       <div className='container'>
         <div className="card my-3" >
-        <span className="position-absolute top-0  translate-middle badge rounded-pill bg-success" style={{zIndex:"1",left:"100%"}}>
+        <span className="position-absolute top-0  translate-middle badge rounded-pill bg-success" style={{zIndex:"1",left:"90%"}}>
                 {source}
            
            </span>
