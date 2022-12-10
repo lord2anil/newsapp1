@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "totalResults": 3,
+    "articles": [
+        {
+            "source": {
+                "id": "google-news-in",
+                "name": "Google News (India)"
+            },
+            "author": "India Today Web Desk",
+            "title": "Gujarat polls: Ravindra Jadeja's wife Rivaba claims victory from Jamnagar",
+            "description": "Rivaba Jadeja, wife of Indian cricketer Ravindra Jadeja, is leading with a margin of over 50,000 votes from Jamnagar assembly seat in Gujarat.",
+            "url": "https://www.indiatoday.in/elections/gujarat-assembly-polls-2022/story/ravindra-jadeja-wife-rivaba-claims-victory-from-jamnagar-gujarat-2306851-2022-12-08",
+            "urlToImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202212/317870282_712542996901463_4848210939499399098_n_0-sixteen_nine.jpg?VersionId=vXfu8J6D_2v3XLrzVBHWspwBuClu8Ddr",
+            "publishedAt": "2022-12-08T11:09:29+00:00",
+            "content": "By India Today Web Desk: Indian cricketer Ravindra Jadeja's wife, Rivaba Jadeja, has claimed victory from the Jamnagar assembly seat on Thursday. Rivaba Jadeja was fielded by the Bharatiya Janata Par… [+1068 chars]"
+        },
+        {
+            "source": {
+                "id": "espn-cric-info",
+                "name": "ESPN Cric Info"
+            },
+            "author": null,
+            "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
+            "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
+            "url": "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
+            "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg",
+            "publishedAt": "2020-04-27T11:41:47Z",
+            "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
+        },
+        {
+            "source": {
+                "id": "espn-cric-info",
+                "name": "ESPN Cric Info"
+            },
+            "author": null,
+            "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
+            "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
+            "url": "http://www.espncricinfo.com/story/_/id/28970907/learned-watching-1992-world-cup-final-full-again",
+            "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
+            "publishedAt": "2020-03-30T15:26:05Z",
+            "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
+        }
+    ]
+}
