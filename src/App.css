@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.loader{
+  background-color: #cc3c08 !important; 
+  color: #61dafb;
+  height: 2px !important;
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%) !important;
+
+}
