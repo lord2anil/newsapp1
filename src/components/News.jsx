@@ -22,7 +22,7 @@ export default class News extends Component {
     super(props);
     this.state={
         articles: [],
-        loading:false,
+        loading:true,
         page:1,
         totalResults:0
 
@@ -60,32 +60,46 @@ async componentDidMount(){
 //   this.updatenews();
 // }
 
+fetchMoreData =async () => {
+  this.setState({page:this.state.page+1})
+  let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2e8a19860f60475cb34711e0e53d7178&pagesize=${this.props.pagesize}&page=${this.state.page}`;
+  
+
+  let data=await fetch(url)
+  let parsed=await data.json()
+  this.setState({
+      articles:this.state.articles.concat(parsed.articles),
+            totalResults:parsed.totalResults,
+     
+  })
+};
 
 
   render() {
     return (
         <>
-      <div className='container my-5'>
+     
 
-        <h1 className='text-center ' style={{margin:"34px 0px"}}>Apna news top headlines on {this.Captalized(this.props.category)} </h1>
-        {/* {this.state.loading && <><Spinner/>
+        <h1 className='text-center   ' style={{margin:"55px 0px"}}>Apna news top headlines on {this.Captalized(this.props.category)} </h1>
+        {this.state.loading && <><  Spinner/>
         <h2 className='text-center'>Loading Please wait</h2>
         </>
-        
-        } */}
+          
+           }
           <InfiniteScroll
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
           hasMore={this.state.articles.length!==this.state.totalResults}
           loader={<Spinner/>}
         >
-        
+          <div className="container">
           <div className="row">
           { this.state.articles.map((Element)=>{
               return <div className="col-md-4" key={Element.url}>
               <Newslist title={Element.title?Element.title.slice(0,44):""} discription={Element.description?Element.description.slice(0,88):" "} imageUrl={Element.urlToImage?Element.urlToImage:"/"} newsurl={Element.url} publishAt={Element.publishedAt}  Author={Element.author}  source={Element.source.name} />
               </div>
           })}
+          </div>
           </div>
        </InfiniteScroll>
 
@@ -94,7 +108,7 @@ async componentDidMount(){
         <button type="button" disabled={Math.ceil(this.state.page+1>(this.state.totalResults)/this.props.pagesize)} onClick={this.handleNext} className="btn btn-info">Next &rarr;</button>
         </div> */}
         
-      </div> 
+     
       </>
     )
   }
