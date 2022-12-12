@@ -21,9 +21,9 @@ export default function News(props) {
 
 
 const  updatenews=async()=>{
+  
   props.setProgress(10);
-
-  let url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=2e8a19860f60475cb34711e0e53d7178&pagesize=${props.pagesize}&page=${page}`;
+  let url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=c7278457ce9b41478494160bddbd6270&pagesize=${props.pagesize}&page=${page}`;
     
     setloading(true);
     props.setProgress(20);
@@ -41,9 +41,11 @@ const  updatenews=async()=>{
 
 }
 useEffect(() => {
+  document.title=`${Captalized(props.category)}-ApnaNews`;
+  
   updatenews();
   
-})
+},[])
 
 // handleNext=async()=>{
 //     this.setState({
@@ -59,8 +61,8 @@ useEffect(() => {
 // }
 
 const fetchMoreData =async () => {
+  let url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=c7278457ce9b41478494160bddbd6270&pagesize=${props.pagesize}&page=${page+1}`;
   setpage(page+1);
-  let url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=2e8a19860f60475cb34711e0e53d7178&pagesize=${props.pagesize}&page=${page}`;
   
 
   let data=await fetch(url)
